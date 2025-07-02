@@ -1,0 +1,1 @@
+bossbar add jcm:wait_to_play [""]

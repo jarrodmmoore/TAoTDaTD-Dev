@@ -1,0 +1,2 @@
+execute unless entity @s[tag=heavy] run function jcm:common/add_velocity_in_direction_3d {force:"0.0055"}
+execute if entity @s[tag=heavy] run function jcm:common/add_velocity_in_direction_3d {force:"0.0035"}

@@ -1,0 +1,1 @@
+$item replace entity @s inventory.16 with yellow_dye[custom_data={questInfo:7},item_model="gold_ingot",custom_name=[{translate:"jcm.quest.gold",bold:true,italic:false}],lore=[{translate:"jcm.quest.gold_need_16",with:[{text:"$(a)"}],color:"$(c)",italic:true},{translate:"jcm.quest.gold_breakdown",with:[{text:"$(a)"},{text:"$(b)"}],color:green,italic:false}]] $(a)

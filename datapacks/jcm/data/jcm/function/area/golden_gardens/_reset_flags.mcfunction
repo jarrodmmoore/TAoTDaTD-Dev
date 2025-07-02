@@ -1,0 +1,1 @@
+scoreboard players set #area7PuzzleSolved value 0

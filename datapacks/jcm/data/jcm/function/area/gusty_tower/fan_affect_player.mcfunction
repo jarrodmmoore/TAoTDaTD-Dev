@@ -1,0 +1,2 @@
+execute if entity @s[scores={playerCharacter=2,inflateState=1..}] run effect give @s levitation 1 3 true
+execute unless entity @s[scores={playerCharacter=2,inflateState=1..}] run effect give @s slow_falling 1 1 true

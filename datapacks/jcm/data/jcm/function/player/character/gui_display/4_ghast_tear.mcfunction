@@ -1,0 +1,6 @@
+execute store result score #test value run execute if items entity @s inventory.13 *[custom_data~{questInfo:4}]
+execute if score #test value matches 0 run clear @s *[custom_data~{questInfo:4}]
+
+execute if score #gameProgress value matches ..1 run item replace entity @s inventory.13 with red_dye[custom_data={questInfo:4},item_model="jcm/gui/ghast_tear_0",custom_name=[{translate:"jcm.ability.missing",bold:true,italic:false}]]
+execute if score #gameProgress value matches 2.. if score #collectedGhastTear value matches ..0 run item replace entity @s inventory.13 with red_dye[custom_data={questInfo:4},item_model="jcm/gui/ghast_tear_1",custom_name=[{translate:"jcm.quest.ghast_tear",bold:true,italic:false}],lore=[{translate:"jcm.quest.0_1_collected",italic:true,color:gray}]]
+execute if score #gameProgress value matches 2.. if score #collectedGhastTear value matches 1.. run item replace entity @s inventory.13 with red_dye[custom_data={questInfo:4},item_model="ghast_tear",custom_name=[{translate:"jcm.quest.ghast_tear",bold:true,italic:false}],lore=[{translate:"jcm.quest.1_1_collected",italic:true,color:yellow}]]

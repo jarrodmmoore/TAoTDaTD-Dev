@@ -1,0 +1,14 @@
+gamerule commandBlockOutput false
+gamerule sendCommandFeedback false
+gamerule announceAdvancements false
+gamerule doDaylightCycle false
+gamerule doEntityDrops false
+gamerule doFireTick false
+gamerule doWeatherCycle false
+gamerule mobGriefing false
+gamerule tntExplodes false
+gamerule fallDamage false
+gamerule doImmediateRespawn true
+gamerule keepInventory true
+gamerule showDeathMessages true
+gamerule randomTickSpeed 0

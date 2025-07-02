@@ -1,0 +1,18 @@
+{
+    "pack": {
+        "pack_format": 81,
+        "description": "Team Scripted map jam"
+    },
+    "filter": {
+        "block": [
+            {
+                "namespace": "minecraft",
+                "path": "recipe/.*"
+            },
+            {
+                "namespace": "minecraft",
+                "path": "advancement/.*"
+            }
+        ]
+    }
+}

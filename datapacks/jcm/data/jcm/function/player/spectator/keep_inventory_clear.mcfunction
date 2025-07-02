@@ -1,0 +1,1 @@
+execute if items entity @s armor.* * run clear @s

@@ -1,0 +1,6 @@
+execute store result score #test value run execute if items entity @s inventory.10 *[custom_data~{questInfo:1}]
+execute if score #test value matches 0 run clear @s *[custom_data~{questInfo:1}]
+
+execute if score #gameProgress value matches ..1 run item replace entity @s inventory.10 with red_dye[custom_data={questInfo:1},item_model="jcm/gui/brewing_stand_0",custom_name=[{translate:"jcm.ability.missing",bold:true,italic:false}]]
+execute if score #gameProgress value matches 2.. if score #foundBrewingStand value matches ..0 run item replace entity @s inventory.10 with red_dye[custom_data={questInfo:1},item_model="jcm/gui/brewing_stand_1",custom_name=[{translate:"jcm.quest.brewing",bold:true,italic:false}],lore=[{translate:"jcm.quest.brewing.not_found",italic:true,color:gray}]]
+execute if score #gameProgress value matches 2.. if score #foundBrewingStand value matches 1.. run item replace entity @s inventory.10 with red_dye[custom_data={questInfo:1},item_model="brewing_stand",custom_name=[{translate:"jcm.quest.brewing",bold:true,italic:false}],lore=[{translate:"jcm.quest.brewing.found",italic:true,color:yellow}]]

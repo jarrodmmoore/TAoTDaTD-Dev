@@ -1,0 +1,9 @@
+execute if score #area1Tutorial value matches 1.. run function jcm:area/tutorial/_area_tick
+execute if score #area2CentralCaverns value matches 1.. run function jcm:area/central_caves/_area_tick
+execute if score #area3AncientCity value matches 1.. run function jcm:area/ancient_city/_area_tick
+execute if score #area4LushCaves value matches 1.. run function jcm:area/lush_caves/_area_tick
+execute if score #area5WaterWorks value matches 1.. run function jcm:area/waterworks/_area_tick
+execute if score #area6AridCliff value matches 1.. run function jcm:area/arid_cliff/_area_tick
+execute if score #area7GoldenGarden value matches 1.. run function jcm:area/golden_gardens/_area_tick
+execute if score #area8GustyTower value matches 1.. run function jcm:area/gusty_tower/_area_tick
+execute if score #area9PaleMaze value matches 1.. run function jcm:area/pale_maze/_area_tick

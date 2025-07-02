@@ -1,0 +1,1 @@
+$particle minecraft:trail{color:[1,1,1],target:[$(x).5,$(y),$(z).5],duration:90} ~ ~.5 ~ 0.75 0 0.75 1 1 force

@@ -1,0 +1,1 @@
+$data modify storage jcm:data $(character)_checkpoint set value [1,0,1,0]

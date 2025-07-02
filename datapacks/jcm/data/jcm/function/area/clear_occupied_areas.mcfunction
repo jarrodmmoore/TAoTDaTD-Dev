@@ -1,0 +1,9 @@
+scoreboard players set #area1Tutorial value 0
+scoreboard players set #area2CentralCaverns value 0
+scoreboard players set #area3AncientCity value 0
+scoreboard players set #area4LushCaves value 0
+scoreboard players set #area5WaterWorks value 0
+scoreboard players set #area6AridCliff value 0
+scoreboard players set #area7GoldenGarden value 0
+scoreboard players set #area8GustyTower value 0
+scoreboard players set #area9PaleMaze value 0

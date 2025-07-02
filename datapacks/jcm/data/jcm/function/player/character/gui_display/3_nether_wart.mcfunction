@@ -1,0 +1,6 @@
+execute store result score #test value run execute if items entity @s inventory.12 *[custom_data~{questInfo:3}]
+execute if score #test value matches 0 run clear @s *[custom_data~{questInfo:3}]
+
+execute if score #gameProgress value matches ..1 run item replace entity @s inventory.12 with red_dye[custom_data={questInfo:3},item_model="jcm/gui/nether_wart_0",custom_name=[{translate:"jcm.ability.missing",bold:true,italic:false}]]
+execute if score #gameProgress value matches 2.. if score #collectedNetherWart value matches ..0 run item replace entity @s inventory.12 with red_dye[custom_data={questInfo:3},item_model="jcm/gui/nether_wart_1",custom_name=[{translate:"jcm.quest.nether_wart",bold:true,italic:false}],lore=[{translate:"jcm.quest.0_1_collected",italic:true,color:gray}]]
+execute if score #gameProgress value matches 2.. if score #collectedNetherWart value matches 1.. run item replace entity @s inventory.12 with red_dye[custom_data={questInfo:3},item_model="nether_wart",custom_name=[{translate:"jcm.quest.nether_wart",bold:true,italic:false}],lore=[{translate:"jcm.quest.1_1_collected",italic:true,color:yellow}]]

@@ -1,0 +1,1 @@
+scoreboard players set #area6Gate value 0
