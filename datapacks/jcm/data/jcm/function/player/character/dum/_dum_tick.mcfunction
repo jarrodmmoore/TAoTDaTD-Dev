@@ -45,3 +45,7 @@ scoreboard players remove @s[scores={suckTime=1..}] suckTime 1
 execute if score @s suckState matches 0 if score @s suckTime matches 1.. run function jcm:player/character/dum/suck/suck_loop
 execute if score @s suckState matches 1 run function jcm:player/character/dum/suck/holding_entity_active
 #--------------------
+
+#create an artificial waypoint so others can see us
+#(note: we're going to use some waypoint style tricks so that we don't see our own waypoint that we generate)
+function jcm:player/character/dum/dum_waypoint

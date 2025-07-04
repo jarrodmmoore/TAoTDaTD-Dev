@@ -46,3 +46,7 @@ execute if score @s trampolineState matches 1.. run function jcm:player/characte
 #manage clones
 execute if score @s cloneState matches 1.. run function jcm:player/character/dee/clone/manage_clones
 #--------------------
+
+#create an artificial waypoint so others can see us
+#(note: we're going to use some waypoint style tricks so that we don't see our own waypoint that we generate)
+function jcm:player/character/dee/dee_waypoint
