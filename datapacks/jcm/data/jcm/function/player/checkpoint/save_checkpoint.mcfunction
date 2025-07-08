@@ -1,10 +1,10 @@
-#feedback
-scoreboard players set @s actionbarCooldown 100
-title @s actionbar [{translate:"jcm.game.checkpoint_saved",color:yellow}]
-
 #must be dee or dum
 execute unless score @s playerCharacter matches 1..2 run return 0
 #=====
+
+#feedback
+scoreboard players set @s actionbarCooldown 100
+title @s actionbar [{translate:"jcm.game.checkpoint_saved",color:yellow}]
 
 #checkpoint does its thing
 data modify storage jcm:func_args character set value "dee"

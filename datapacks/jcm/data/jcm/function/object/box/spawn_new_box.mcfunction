@@ -3,11 +3,13 @@
 #-----------------------------------
 #crate
 execute if entity @s[tag=crate] run summon tnt ~ ~ ~ {Tags:["setme","box","crate","tickObject","canPickUp","canSuck"],fuse:100,block_state:{Name:"minecraft:air"},Silent:1b,Passengers:[ \
-    {id:"minecraft:item_display",Tags:["setme3","boxVisual"],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,-0.5f,0f],scale:[1f,1f,1f]},item:{id:"minecraft:stone",count:1,components:{"minecraft:item_model":"bamboo_mosaic"}}} \
+    {id:"minecraft:item_display",Tags:["setme3","boxVisual"],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,-0.5f,0f],scale:[1f,1f,1f]},item:{id:"minecraft:stone",count:1,components:{"minecraft:item_model":"bamboo_mosaic"}}}, \
+    {id:"minecraft:armor_stand",Tags:["setme5","boxWaypoint"],Marker:1b,Invulnerable:true,NoBasePlate:true,attributes:[{id:"minecraft:scale",base:0.0625},{id:"waypoint_transmit_range",base:60}]} \
     ],block_state:{Name:"minecraft:air"}}
 #anvil
 execute if entity @s[tag=anvil] run summon tnt ~ ~ ~ {Tags:["setme","box","anvil","heavy","tickObject","cannotPickUp","canSuck"],fuse:100,block_state:{Name:"minecraft:air"},Silent:1b,Passengers:[ \
-    {id:"minecraft:item_display",Tags:["setme3","boxVisual"],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,-0.5f,0f],scale:[1f,1f,1f]},item:{id:"minecraft:stone",count:1,components:{"minecraft:item_model":"anvil"}}} \
+    {id:"minecraft:item_display",Tags:["setme3","boxVisual"],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,-0.5f,0f],scale:[1f,1f,1f]},item:{id:"minecraft:stone",count:1,components:{"minecraft:item_model":"anvil"}}}, \
+    {id:"minecraft:armor_stand",Tags:["setme5","boxWaypoint"],Marker:1b,Invulnerable:true,NoBasePlate:true,attributes:[{id:"minecraft:scale",base:0.0625},{id:"waypoint_transmit_range",base:60}]} \
     ],block_state:{Name:"minecraft:air"}}
 
 #shulker for entity physics
@@ -33,3 +35,9 @@ scoreboard players set @e[tag=setme4,distance=..1,type=block_display] lifespan 7
 scoreboard players operation @e[tag=setme4,distance=..1,type=block_display] boxInstance = @s boxInstance
 scoreboard players operation @e[tag=setme4,distance=..1,type=block_display] boxSpawnerUID = @s boxSpawnerUID
 tag @e[tag=setme4,distance=..1,type=block_display] remove setme4
+
+scoreboard players set @e[tag=setme5,distance=..1,type=armor_stand] lifespan 7
+waypoint modify @e[tag=setme5,distance=..1,type=armor_stand,limit=1] color white
+execute if entity @s[tag=crate] run waypoint modify @e[tag=setme5,distance=..1,type=armor_stand,limit=1] style set minecraft:crate
+execute if entity @s[tag=anvil] run waypoint modify @e[tag=setme5,distance=..1,type=armor_stand,limit=1] style set minecraft:anvil
+tag @e[tag=setme5,distance=..1,type=armor_stand] remove setme5

@@ -5,6 +5,7 @@ tag @s remove box
 
 #associated entities die
 execute on passengers if entity @s[type=item_display,tag=boxVisual] run scoreboard players set @s lifespan 0
+execute on passengers if entity @s[tag=boxWaypoint] run scoreboard players set @s lifespan 0
 
 #feedback
 particle block{block_state:"bamboo_mosaic"} ~ ~.5 ~ 0.5 0.5 0.5 1 30 force

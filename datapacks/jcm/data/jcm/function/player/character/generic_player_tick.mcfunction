@@ -13,7 +13,7 @@ execute store result score #itemCheck value run clear @s gold_ingot
 execute if score #itemCheck value matches 1.. run function jcm:player/character/collected_ingot
 
 #save checkpoints when near them
-execute if score #5Hz value matches 3 if entity @e[type=marker,tag=checkpoint,distance=..4] run function jcm:player/checkpoint/save_checkpoint
+execute if entity @e[type=marker,tag=checkpoint,distance=..4] run function jcm:player/checkpoint/save_checkpoint
 
 #die on spikes
 execute if entity @s[gamemode=adventure] at @s if block ~ ~0.5 ~ iron_trapdoor[half=bottom,powered=false] run kill @s

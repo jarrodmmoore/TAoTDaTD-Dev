@@ -1,5 +1,6 @@
 #can't do it in small spaces
 scoreboard players set #test value 0
+execute if block ~ ~.75 ~ #jcm:not_solid run scoreboard players add #test value 1
 execute if block ~.75 ~.75 ~.75 #jcm:not_solid run scoreboard players add #test value 1
 execute if block ~-.75 ~.75 ~.75 #jcm:not_solid run scoreboard players add #test value 1
 execute if block ~.75 ~.75 ~-.75 #jcm:not_solid run scoreboard players add #test value 1
@@ -8,7 +9,7 @@ execute if block ~.75 ~1.75 ~.75 #jcm:not_solid run scoreboard players add #test
 execute if block ~-.75 ~1.75 ~.75 #jcm:not_solid run scoreboard players add #test value 1
 execute if block ~.75 ~1.75 ~-.75 #jcm:not_solid run scoreboard players add #test value 1
 execute if block ~-.75 ~1.75 ~-.75 #jcm:not_solid run scoreboard players add #test value 1
-execute if score #test value matches ..7 run return run function jcm:player/character/cooldown_error
+execute if score #test value matches ..8 run return run function jcm:player/character/cooldown_error
 #=====
 
 #feedback

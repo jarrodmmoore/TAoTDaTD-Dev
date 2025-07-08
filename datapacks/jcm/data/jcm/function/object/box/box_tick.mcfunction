@@ -12,6 +12,9 @@ execute as @e[type=block_display,tag=boxCollisionPos] if score @s boxSpawnerUID 
 #count up age
 scoreboard players add @s age 1
 
+#keep waypoint alive
+execute on passengers if entity @s[tag=boxWaypoint] run scoreboard players set @s lifespan 7
+
 #some things destroy crate
 execute if entity @s[tag=crate] if block ~ ~ ~ #jcm:destroys_crate unless block ~ ~ ~ iron_trapdoor[powered=true] unless block ~ ~ ~ iron_trapdoor[half=top] run return run function jcm:object/box/crate_destroy
 #=====

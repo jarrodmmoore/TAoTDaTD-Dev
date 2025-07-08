@@ -8,6 +8,9 @@ execute as @a[gamemode=adventure,tag=onGround,scores={coord_x=43..86,coord_y=-5.
 execute as @a[gamemode=adventure,tag=onGround,scores={currentArea=7,coord_y=..-10}] unless score @s death matches 1 unless score @s deathTime matches 1.. run kill @s
 #--------------------
 
+#actionbar multi-button display
+execute if score #area7PuzzleSolved value matches 0 run function jcm:area/golden_gardens/multi_button_display
+
 #clone puzzle
 execute if score #area7PuzzleSolved value matches 0 \
     if block 42 17 -190 redstone_block \

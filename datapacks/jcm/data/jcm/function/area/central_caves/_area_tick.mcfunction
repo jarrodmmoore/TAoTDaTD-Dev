@@ -4,6 +4,10 @@
 execute as @a[gamemode=adventure,tag=onGround,scores={currentArea=2,coord_y=..-10}] unless score @s death matches 1 unless score @s deathTime matches 1.. run kill @s
 #--------------------
 
+#block the main entryway to gusty tower in NG+
+execute if score #newGamePlus value matches 0 unless block -62 15 -202 air run fill -62 15 -203 -62 26 -197 air replace iron_bars
+execute if score #newGamePlus value matches 1 if block -62 15 -202 air run fill -62 15 -203 -62 26 -197 iron_bars replace air
+
 #1-way iron gate
 execute if score #area2IronGate value matches 0 unless block -36 11 -162 spruce_fence run fill -36 11 -162 -28 14 -162 spruce_fence
 execute if score #area2IronGate value matches 0 if block -32 10 -165 redstone_block run scoreboard players set #area2IronGate value 1

@@ -13,6 +13,9 @@ execute unless entity @a[gamemode=adventure,scores={playerCharacter=2}] run func
 execute as @e[type=marker,tag=tweedleDeeStart] at @s run function jcm:game/0/dee_start_point
 execute as @e[type=marker,tag=tweedleDumStart] at @s run function jcm:game/0/dum_start_point
 
+#no punching please
+effect give @a[gamemode=adventure] weakness 5 100 true
+
 #ticks on players in the cages
 execute as @a[gamemode=adventure,scores={playerCharacter=1..}] run function jcm:game/0/tick_player_in_cage
 

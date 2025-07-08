@@ -7,5 +7,6 @@ execute as @e[type=armor_stand,tag=dumWaypoint,distance=..5] if function jcm:pla
 summon armor_stand ~ ~ ~ {Tags:["setlife","dumWaypoint"],Marker:1b,Invisible:1b,NoGravity:1b,NoBasePlate:1b,attributes:[{id:"minecraft:scale",base:0.0625},{id:"waypoint_transmit_range",base:60000000}]}
 scoreboard players operation @e[tag=setlife,distance=..1,type=armor_stand] playerID = @s playerID
 waypoint modify @e[tag=setlife,distance=..1,type=armor_stand,limit=1] color gold
+waypoint modify @e[tag=setlife,distance=..1,type=armor_stand,limit=1] style set minecraft:dum
 scoreboard players set @e[tag=setlife,distance=..1,type=armor_stand] lifespan 2
 tag @e[tag=setlife,distance=..1,type=armor_stand] remove setlife

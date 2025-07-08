@@ -4,6 +4,10 @@
 execute as @a[gamemode=adventure,scores={currentArea=3,coord_y=..-18}] unless entity @s[tag=!onGround,tag=!inWater] unless score @s death matches 1 unless score @s deathTime matches 1.. run kill @s
 #--------------------
 
+#gate is trapped in NG+!
+execute if score #newGamePlus value matches 0 unless block -96 8 -57 air run fill -96 8 -57 -96 8 -52 air
+execute if score #newGamePlus value matches 1 if block -96 8 -57 air run fill -96 8 -57 -96 8 -52 iron_trapdoor
+
 
 #smashy wall
 execute if score #area3BreakWall value matches 0 unless block -39 5 -46 deepslate_brick_stairs run clone -39 -8 -46 -39 -4 -40 -39 5 -46 strict
@@ -14,8 +18,16 @@ execute if score #area3Gate value matches 0 unless block -96 9 -57 nether_brick_
 execute if score #area3Gate value matches 0 if block -96 17 -34 redstone_block run scoreboard players set #area3Gate value 1
 execute if score #area3Gate value matches 1..99 run function jcm:area/ancient_city/open_castle_gate
 
+#actionbar multi-button display
+execute if score #area3ClonePuzzle value matches 0 run function jcm:area/ancient_city/multi_button_display
+
 #clone puzzle
-execute if score #area3ClonePuzzle value matches 0 if block -106 7 -46 redstone_block if block -113 7 -49 redstone_block if block -127 8 -46 redstone_block if block -107 7 -60 redstone_block if block -124 8 -59 redstone_block \
+execute if score #area3ClonePuzzle value matches 0 \
+    if block -106 7 -46 redstone_block \
+    if block -113 7 -49 redstone_block \
+    if block -127 8 -46 redstone_block \
+    if block -107 7 -60 redstone_block \
+    if block -124 8 -59 redstone_block \
     positioned -109 8 -55 run function jcm:area/ancient_city/solved_clone_puzzle
 
 

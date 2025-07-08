@@ -1,3 +1,8 @@
+#block the main entryway to gusty tower in NG+
+execute if score #newGamePlus value matches 0 unless block -62 15 -202 air run fill -62 15 -203 -62 26 -197 air replace iron_bars
+execute if score #newGamePlus value matches 1 if block -62 15 -202 air run fill -62 15 -203 -62 26 -197 iron_bars replace air
+
+
 #fans spin when buttons is held
 #fan A
 execute if block -83 11 -218 redstone_block as @e[type=item_display,tag=updraftFanA] at @s run function jcm:area/gusty_tower/fan_run

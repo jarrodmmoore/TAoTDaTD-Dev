@@ -4,6 +4,12 @@
 execute as @a[gamemode=adventure,x=37,y=-2,z=-64,dx=20,dy=5,dz=14,tag=onGround] unless score @s death matches 1 unless score @s deathTime matches 1.. run kill @s
 #--------------------
 
+#iron gates in NG+ only
+execute if score #newGamePlus value matches 0 if block 16 8 13 iron_bars run fill 16 8 13 16 12 16 air
+execute if score #newGamePlus value matches 1 unless block 16 8 13 iron_bars run fill 16 8 13 16 12 16 iron_bars
+execute if score #newGamePlus value matches 0 if block 38 7 -5 iron_bars run fill 38 7 -5 46 10 -5 air
+execute if score #newGamePlus value matches 1 unless block 38 7 -5 iron_bars run fill 38 7 -5 46 10 -5 iron_bars
+
 #waterfall
 execute if score #area1Water value matches 0 if block -22 13 3 water run fill -22 6 0 -17 13 3 air replace water
 execute if score #area1Water value matches 0 if block -27 10 -2 redstone_block run function jcm:area/tutorial/open_waterfall

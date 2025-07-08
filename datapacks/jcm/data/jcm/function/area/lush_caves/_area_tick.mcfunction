@@ -1,3 +1,10 @@
+#block the shrink tunnel in NG+
+execute if score #newGamePlus value matches 0 unless block 120 3 -52 air run fill 120 3 -52 122 3 -52 air
+execute if score #newGamePlus value matches 1 if block 120 3 -52 air run fill 120 3 -52 122 3 -52 tuff
+
+#actionbar multi-button display
+execute if score #area4GatePuzzle value matches 0 run function jcm:area/lush_caves/multi_button_display
+
 #multi-button gate
 execute if score #area4GatePuzzle value matches 0 unless block 118 7 -117 dark_oak_fence run fill 118 7 -117 124 13 -117 dark_oak_fence
 execute if score #area4GatePuzzle value matches 0 if block 124 6 -92 redstone_block if block 111 8 -102 redstone_block if block 112 12 -109 redstone_block run scoreboard players set #area4GatePuzzle value 1
