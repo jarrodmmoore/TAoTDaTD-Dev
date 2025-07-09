@@ -47,7 +47,7 @@ Enter Creative Mode and type `/trigger editor` to place objects like gold, chest
 14 = unused (Dum)
 ```
 - cauldronID is the ability the cauldron gives in the first playthrough
-- caludronID2 is the ability given in New Game +
+- cauldronID2 is the ability given in New Game +
 - When a cauldron is placed, Barrier blocks should be placed in a 3x3 in the bottom half of the model (otherwise it won't acknowledge when players get inside)
 - Cauldrons should be surrounded by Iron Doors (they're invisible) to give them proper collision
 
