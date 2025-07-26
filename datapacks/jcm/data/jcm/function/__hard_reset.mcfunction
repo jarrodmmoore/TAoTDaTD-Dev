@@ -7,4 +7,5 @@ function jcm:__reset_progress
 scoreboard players reset @a
 gamemode adventure @a
 tag @a remove forceGameplay
+tag @a remove skipIntro
 function jcm:game/0/_0_init

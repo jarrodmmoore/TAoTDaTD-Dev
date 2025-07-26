@@ -7,6 +7,9 @@ attribute @s movement_speed base set 0.025
 #no sucking in this state
 scoreboard players set @s suckTime 0
 
+#no unexpected bounces, please
+scoreboard players set @s bounceTime 0
+
 #can't be in a weird state
 scoreboard players set #success value 1
 execute if score @s ballState matches 1.. run scoreboard players set #success value 0

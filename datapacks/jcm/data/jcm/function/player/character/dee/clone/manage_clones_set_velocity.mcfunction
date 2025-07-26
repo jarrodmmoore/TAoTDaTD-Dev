@@ -28,10 +28,18 @@ execute if score #inDirection value matches 6 run rotate @s ~225 0
 execute if score #inDirection value matches 7 run rotate @s ~270 0
 execute if score #inDirection value matches 8 run rotate @s ~315 0
 
+#exit out
+execute unless score #test3 value matches 1.. run return 0
+#=====
+
 #force from direct inputs
 execute store result score #groundState value run execute if entity @s[nbt={OnGround:1b}]
-execute if score #groundState value matches 1 if score #inDirection value matches 1..8 rotated as @s run function jcm:common/add_velocity_in_direction_2d {force:"0.004"}
+execute unless score @s trampolineState matches 1 if score #groundState value matches 1 if score #inDirection value matches 1..8 rotated as @s run function jcm:common/add_velocity_in_direction_2d {force:"0.004"}
+execute if score @s trampolineState matches 1 if score #groundState value matches 1 if score #inDirection value matches 1..8 rotated as @s run function jcm:common/add_velocity_in_direction_2d {force:"0.002"}
 execute if score #groundState value matches 0 if score #inDirection value matches 1..8 rotated as @s run function jcm:common/add_velocity_in_direction_2d {force:"0.0006"}
 
 #we can jump when on ground
-execute if score #groundState value matches 1 if score #jumpInput value matches 1 run function jcm:common/add_raw_force_3d {x:0,y:1250,z:0}
+execute if score #groundState value matches 1 if score #jumpInput value matches 1 unless score @s trampolineState matches 1 run function jcm:common/add_raw_force_3d {x:0,y:1250,z:0}
+
+#feedback particle
+execute if score #10Hz value matches 1 run particle end_rod ~ ~.2 ~ 0.25 0 0.25 0 1 force

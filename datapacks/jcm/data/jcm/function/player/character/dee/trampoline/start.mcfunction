@@ -15,5 +15,9 @@ particle minecraft:effect ~ ~2 ~ 1.5 0.5 1.5 1 10 force
 #we're in the trampoline state
 scoreboard players set @s trampolineState 1
 
+#all clones do it, too
+scoreboard players operation #checkID value = @s playerID
+execute as @e[type=skeleton,tag=deeClone] if score @s playerID = #checkID value run function jcm:player/character/dee/clone/activate_trampoline
+
 #cooldown
 scoreboard players set @s inputCooldownD 15

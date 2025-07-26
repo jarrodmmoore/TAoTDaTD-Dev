@@ -45,7 +45,7 @@ execute if score #area5BreakWall value matches 0 if entity @e[type=slime,tag=dum
 
 #gate blocking door to boneyard
 execute if score #area5TunnelGate value matches 0 unless block 70 11 -28 oak_fence run fill 70 11 -28 73 14 -28 oak_fence
-execute if score #area5TunnelGate value matches 0 if block 65 10 -32 redstone_block run scoreboard players set #area5TunnelGate value 1
+execute if score #area5TunnelGate value matches 0 if block 65 10 -32 redstone_block if block 65 10 -45 redstone_block run scoreboard players set #area5TunnelGate value 1
 execute if score #area5TunnelGate value matches 1..99 run function jcm:area/waterworks/open_tunnel_gate
 
 #door connecting boneyard and waterworks

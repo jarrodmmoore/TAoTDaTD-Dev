@@ -2,4 +2,4 @@
 execute if entity @e[type=marker,tag=cauldron,distance=..2] run function jcm:player/character/inside_cauldron
 
 #trampoline
-execute if entity @s[tag=onGround] if entity @e[type=marker,tag=temporaryBarrier,distance=..2] run function jcm:common/bounce_player
+execute if entity @s[tag=onGround] if entity @e[type=marker,tag=temporaryBarrier,distance=..2] unless score @s bounceTime matches 1.. run scoreboard players set @s bounceTime 1

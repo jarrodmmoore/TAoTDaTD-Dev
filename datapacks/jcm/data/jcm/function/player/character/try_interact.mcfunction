@@ -4,4 +4,4 @@
 #tag @s remove reciever
 
 #talk to nearby dudes (if LOS is valid)
-execute positioned ~ ~1 ~ as @e[tag=npc,distance=..7] unless score @s age matches 1.. facing entity @s feet if function jcm:common/check_los run scoreboard players set @s age 1
+execute positioned ~ ~1 ~ as @e[tag=npc,distance=..7,limit=1,sort=nearest] unless score @s age matches 1.. facing entity @s feet if function jcm:common/check_los run scoreboard players set @s age 1

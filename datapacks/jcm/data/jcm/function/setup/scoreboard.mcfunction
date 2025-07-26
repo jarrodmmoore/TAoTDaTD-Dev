@@ -40,6 +40,7 @@ scoreboard objectives add currentArea dummy
 scoreboard objectives add dCurrentArea dummy
 scoreboard objectives add interactNearby dummy
 scoreboard objectives add deathTime dummy
+scoreboard objectives add bounceTime dummy
 
 #character-specific
 scoreboard objectives add playerSize dummy

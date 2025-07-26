@@ -1,3 +1,7 @@
+#special bounce for trampoline
+execute if block ~ ~-.25 ~ barrier if entity @e[type=marker,tag=temporaryBarrier,distance=..3] run return run function jcm:common/bounce_player
+#=====
+
 #bounce up based on last fall velocity
 scoreboard players set $x player_motion.api.launch 0
 scoreboard players set $y player_motion.api.launch 5000

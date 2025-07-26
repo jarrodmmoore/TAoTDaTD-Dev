@@ -8,6 +8,9 @@ execute if score @s npcID matches 3 run function jcm:object/npc/talk_3
 execute if score @s npcID matches 4 run function jcm:object/npc/talk_4
 execute if score @s npcID matches 5 run function jcm:object/npc/talk_5
 execute if score @s npcID matches 6 run function jcm:object/npc/talk_6
+execute if score @s npcID matches 7 run function jcm:object/npc/talk_7
+execute if score @s npcID matches 8 run function jcm:object/npc/talk_8
+execute if score @s npcID matches 9 run function jcm:object/npc/talk_9
 #...
 
 #failsafe if no dialog happened

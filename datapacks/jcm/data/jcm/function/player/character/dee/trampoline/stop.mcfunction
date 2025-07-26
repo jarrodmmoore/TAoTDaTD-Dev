@@ -11,5 +11,9 @@ playsound minecraft:item.book.page_turn master @a ~ ~ ~ 1 1.8
 particle poof ~ ~2 ~ 1.5 0 1.5 0.01 10 force
 particle small_gust ~ ~2 ~ 1.5 0 1.5 0.1 10 force
 
+#all clones stop trampolining, too
+#scoreboard players operation #checkID value = @s playerID
+#execute as @e[type=skeleton,tag=deeClone] if score @s playerID = #checkID value at @s run function jcm:player/character/dee/clone/deactivate_trampoline
+
 #can't do it again for 0.5 sec
 scoreboard players set @s[scores={inputCooldownD=..9}] inputCooldownD 10

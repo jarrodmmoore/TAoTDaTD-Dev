@@ -4,11 +4,6 @@
 execute as @a[gamemode=adventure,scores={currentArea=3,coord_y=..-18}] unless entity @s[tag=!onGround,tag=!inWater] unless score @s death matches 1 unless score @s deathTime matches 1.. run kill @s
 #--------------------
 
-#gate is trapped in NG+!
-execute if score #newGamePlus value matches 0 unless block -96 8 -57 air run fill -96 8 -57 -96 8 -52 air
-execute if score #newGamePlus value matches 1 if block -96 8 -57 air run fill -96 8 -57 -96 8 -52 iron_trapdoor
-
-
 #smashy wall
 execute if score #area3BreakWall value matches 0 unless block -39 5 -46 deepslate_brick_stairs run clone -39 -8 -46 -39 -4 -40 -39 5 -46 strict
 execute if score #area3BreakWall value matches 0 if entity @e[type=slime,tag=dumBall,scores={ballSpin=15..},x=-41,y=4,z=-47,dx=6,dy=5,dz=8] run function jcm:area/ancient_city/break_wall
@@ -34,6 +29,10 @@ execute if score #area3ClonePuzzle value matches 0 \
 #5Hz only beyond this point
 execute unless score #5Hz value matches 0 run return 0
 #=====
+
+#gate is trapped in NG+!
+execute if score #newGamePlus value matches 0 unless block -96 8 -57 air run fill -96 8 -57 -96 8 -52 air
+execute if score #newGamePlus value matches 1 if block -96 8 -57 air run fill -96 8 -57 -96 8 -52 iron_trapdoor
 
 #or button
 execute store result score #check1 value run execute if block -45 11 -35 redstone_block

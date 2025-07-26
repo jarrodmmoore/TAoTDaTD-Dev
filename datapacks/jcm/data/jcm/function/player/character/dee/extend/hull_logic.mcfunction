@@ -27,6 +27,9 @@ execute if score #groundState value matches 0 if score #inDirection value matche
 #we can jump when on ground
 execute if score #groundState value matches 1 if score #jumpInput value matches 1 run function jcm:common/add_raw_force_3d {x:0,y:1250,z:0}
 
+#bounce on trampoline
+execute if block ~ ~-.25 ~ barrier if entity @e[type=marker,tag=temporaryBarrier,distance=..3] run function jcm:common/add_raw_force_3d {x:"0",y:"2500",z:"0"}
+
 #we did it
 scoreboard players set #success value 1
 #..unless we're in water. in which case, die

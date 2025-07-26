@@ -13,6 +13,7 @@ scoreboard players operation #checkID value = @s playerID
 #execute store result score #motion_x value run data get entity @s Motion[0] 100000
 execute store result score #motion_y value run data get entity @s Motion[1] 100000
 #execute store result score #motion_z value run data get entity @s Motion[2] 100000
+execute store result score #test3 value run execute if items entity @s weapon.mainhand *[custom_data~{slot:3}]
 execute as @e[type=skeleton,tag=deeClone,distance=..80,sort=nearest] if score @s playerID = #checkID value positioned as @s run function jcm:player/character/dee/clone/manage_clones_set_velocity
 
 #no more clones? stop worrying, then

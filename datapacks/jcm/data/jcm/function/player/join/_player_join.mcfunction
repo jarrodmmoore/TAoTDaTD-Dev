@@ -2,6 +2,7 @@
 
 #remove debug tags
 tag @s remove forceGameplay
+tag @s remove skipIntro
 
 #join or become spectator depending on game state
 execute unless score #gameState value matches 1 run function jcm:player/join/join_lobby
@@ -47,5 +48,6 @@ scoreboard players set @s inputCooldownE 0
 scoreboard players set @s actionbarCooldown 0
 scoreboard players set @s launchCooldown 0
 scoreboard players set @s interactNearby 0
+scoreboard players set @s bounceTime 0
 scoreboard players add #playerID value 1
 scoreboard players operation @s playerID = #playerID value

@@ -8,3 +8,4 @@ scoreboard players set $z player_motion.api.launch 0
 execute unless score @s launchCooldown matches 1.. if score $y player_motion.api.launch matches 100.. run playsound minecraft:block.slime_block.fall master @a ~ ~ ~ 2 0.6
 execute unless score @s launchCooldown matches 1.. if score $y player_motion.api.launch matches 100.. run function player_motion:api/launch_xyz
 scoreboard players set @s launchCooldown 10
+scoreboard players set @s bounceTime 0

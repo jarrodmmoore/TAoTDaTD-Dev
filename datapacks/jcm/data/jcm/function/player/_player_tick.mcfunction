@@ -17,6 +17,9 @@ scoreboard players remove @s[scores={inputCooldownC=1..}] inputCooldownC 1
 scoreboard players remove @s[scores={inputCooldownD=1..}] inputCooldownD 1
 scoreboard players remove @s[scores={inputCooldownE=1..}] inputCooldownE 1
 
+#bounce time
+execute if score @s bounceTime matches 1.. run function jcm:player/delayed_bounce
+
 #limit on how often we can launch players with motion library (otherwise we could get nasty desync bugs)
 scoreboard players remove @s[scores={launchCooldown=1..}] launchCooldown 1
 

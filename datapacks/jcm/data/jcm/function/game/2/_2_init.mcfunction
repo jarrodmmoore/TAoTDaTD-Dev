@@ -18,6 +18,7 @@ execute as @a[gamemode=!creative] unless score @s playerCharacter matches 1..2 r
 scoreboard players set #introCutscene value 0
 execute if score #gameProgress value matches 1.. run scoreboard players set #introCutscene value 100000
 execute if score #newGamePlus value matches 1 run scoreboard players set #introCutscene value 100000
+execute if entity @a[tag=skipIntro] run scoreboard players set #introCutscene value 100000
 
 #lights out
 setblock 9 202 0 air
