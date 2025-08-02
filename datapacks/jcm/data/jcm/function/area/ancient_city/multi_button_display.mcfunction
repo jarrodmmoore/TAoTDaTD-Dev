@@ -11,5 +11,5 @@ execute positioned -107 7 -60 run function jcm:area/append_button_state_not_fina
 execute positioned -124 8 -59 run function jcm:area/append_button_state_final
 
 #display if 1+ button is pressed
-execute if score #count value matches 1.. run scoreboard players set @a[gamemode=adventure,scores={currentArea=3}] actionbarCooldown 10
-execute if score #count value matches 1.. run title @a[gamemode=adventure,scores={currentArea=3}] actionbar [{nbt:"button_display[0]",storage:"jcm:data",interpret:true},{nbt:"button_display[1]",storage:"jcm:data",interpret:true},{nbt:"button_display[2]",storage:"jcm:data",interpret:true},{nbt:"button_display[3]",storage:"jcm:data",interpret:true},{nbt:"button_display[4]",storage:"jcm:data",interpret:true}]
+execute if score #count value matches 1.. run scoreboard players set @a[gamemode=adventure,scores={currentArea=3,actionbarCooldown=..10}] actionbarCooldown 10
+execute if score #count value matches 1.. run title @a[gamemode=adventure,scores={currentArea=3,actionbarCooldown=..10}] actionbar [{nbt:"button_display[0]",storage:"jcm:data",interpret:true},{nbt:"button_display[1]",storage:"jcm:data",interpret:true},{nbt:"button_display[2]",storage:"jcm:data",interpret:true},{nbt:"button_display[3]",storage:"jcm:data",interpret:true},{nbt:"button_display[4]",storage:"jcm:data",interpret:true}]
