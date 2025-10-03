@@ -8,6 +8,10 @@ This repository is the world file containing everything needed to play the map. 
 - Planet Minecraft page: https://www.planetminecraft.com/project/the-adventures-of-tweedle-dee-and-tweedle-dum/
 - StickyPiston trial page: https://trial.stickypiston.co/map/adventuresoftweedledeedum
 
+## Media
+- Map trailer: https://youtu.be/3VbTIBAkgaQ?si=aMrx1F8fVcUEdZmQ
+- Full game walkthrough: https://youtu.be/ws301WkhqrQ?si=RKfXPxVIy8ixAFCn
+
 ## Map Jam
 - This map was originally created in 4 days for the 2025 Java Creators MapJam.
 
