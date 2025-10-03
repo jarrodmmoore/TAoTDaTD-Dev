@@ -12,3 +12,5 @@ gamerule doImmediateRespawn true
 gamerule keepInventory true
 gamerule showDeathMessages true
 gamerule randomTickSpeed 0
+gamerule commandBlocksEnabled true
+gamerule pvp true
