@@ -20,6 +20,7 @@ summon skeleton ~ ~ ~ {Tags:["setme","deeClone","tickObject","ballCanLaunchInlin
 scoreboard players operation @e[tag=setme,type=skeleton,distance=..2] playerID = @s playerID
 team join player @e[tag=setme,type=skeleton,distance=..2]
 scoreboard players set @e[tag=setme,type=skeleton,distance=..2] lifespan 2
+tag @e[tag=setme,type=skeleton,distance=..2] remove setme
 #---------
 
 #cooldown
