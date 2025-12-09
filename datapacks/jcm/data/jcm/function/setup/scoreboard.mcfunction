@@ -1,6 +1,6 @@
 #general
 scoreboard objectives add value dummy
-scoreboard objectives add joinTick dummy
+scoreboard objectives add joinTick custom:leave_game
 scoreboard objectives add entityHealth dummy
 scoreboard objectives add launchCooldown dummy
 scoreboard objectives add cauldronID dummy
