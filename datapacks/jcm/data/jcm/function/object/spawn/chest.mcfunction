@@ -2,7 +2,7 @@ scoreboard players add @s chestID 0
 
 #summon the thing
 summon block_display ~ ~ ~ {Tags:["checkValid","setme","chestVisual"],billboard:"vertical",brightness:{block:15,sky:15},block_state:{Name:"chest"}, \
-    transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[-0.5f,0f,-0.5f],scale:[1f,1f,1f]},Passengers:[ \
+    transformation:{left_rotation:[0f,1f,0f,1f],right_rotation:[0f,1f,0f,1f],translation:[0.5f,0f,0.5f],scale:[1f,1f,1f]},Passengers:[ \
     {id:"interaction",Tags:["setme2","checkValid","chestInteraction","tickObject"],width:1.2,height:2} \
 ]}
 

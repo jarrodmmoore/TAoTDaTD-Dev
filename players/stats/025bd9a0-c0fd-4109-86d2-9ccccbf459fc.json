@@ -1,0 +1,48 @@
+{
+  "stats": {
+    "minecraft:used": {
+      "minecraft:carrot_on_a_stick": 1931,
+      "minecraft:gray_concrete": 16,
+      "minecraft:basalt": 4
+    },
+    "minecraft:picked_up": {
+      "minecraft:gold_nugget": 229
+    },
+    "minecraft:killed_by": {
+      "minecraft:skeleton": 1,
+      "minecraft:vindicator": 2,
+      "minecraft:iron_golem": 1
+    },
+    "minecraft:killed": {
+      "minecraft:skeleton": 11,
+      "minecraft:wither_skeleton": 3,
+      "minecraft:vindicator": 1,
+      "minecraft:spider": 13
+    },
+    "minecraft:custom": {
+      "minecraft:time_since_rest": 5541,
+      "minecraft:walk_one_cm": 290740,
+      "minecraft:leave_game": 10,
+      "minecraft:mob_kills": 32,
+      "minecraft:walk_under_water_one_cm": 1554,
+      "minecraft:damage_taken": 3203,
+      "minecraft:damage_dealt": 6648,
+      "minecraft:interact_with_lectern": 7,
+      "minecraft:play_time": 122786,
+      "minecraft:jump": 863,
+      "minecraft:time_since_death": 5540,
+      "minecraft:open_barrel": 1,
+      "minecraft:sprint_one_cm": 599803,
+      "minecraft:fall_one_cm": 263721,
+      "minecraft:swim_one_cm": 3467,
+      "minecraft:total_world_time": 140639,
+      "minecraft:fly_one_cm": 2196131,
+      "minecraft:walk_on_water_one_cm": 4584,
+      "minecraft:crouch_one_cm": 5719,
+      "minecraft:sneak_time": 3110,
+      "minecraft:climb_one_cm": 306,
+      "minecraft:deaths": 20
+    }
+  },
+  "DataVersion": 4903
+}
