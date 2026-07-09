@@ -11,6 +11,7 @@ This repository is the world file containing everything needed to play the map. 
 ## Media
 - Map trailer: https://youtu.be/3VbTIBAkgaQ?si=aMrx1F8fVcUEdZmQ
 - Full game walkthrough: https://youtu.be/ws301WkhqrQ?si=RKfXPxVIy8ixAFCn
+- Realms blog post: https://www.minecraft.net/en-us/article/new-on-java-realms--interview-with-a-mob
 
 ## Map Jam
 - This map was originally created in 4 days for the 2025 Java Creators MapJam.
